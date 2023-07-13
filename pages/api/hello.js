@@ -1,17 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { getToken } from "next-auth/jwt";
-
-const secret = process.env.NEXTAUTH_SECRET;
+import sequalizeConfig from "../../db/setup/sequalize_config";
 
 export default async function handler(req, res) {
-  const token = await getToken({ req, secret });
+  const userInput = req.body.username; // User-supplied input
 
-  console.log("token", token);
+  // Vulnerable code
+  const query = `SELECT * FROM users WHERE username = '${userInput}';`;
 
-  if (token) {
-    console.log("JSON Web Token", token);
-    return res.status(200).json({ success: true, data: ["1", "2"] });
-  } else {
-    return res.status(401).json({ success: false });
-  }
+  let result = sequalizeConfig.getSequelize().query(query);
+  return res.status(200).json({success: true, data: result});
 }
