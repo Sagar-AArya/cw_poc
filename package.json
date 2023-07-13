@@ -1,0 +1,21 @@
+{
+  "name": "next-auth-refresh-token-example",
+  "description": "A simple example of using NextAuth.js to refresh an access token",
+  "version": "0.1.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.4.0",
+    "next": "^12",
+    "next-auth": "4.0.0-beta.7",
+    "react": "^17",
+    "react-dom": "^17",
+    "sequelize": "^6.32.1"
+  }
+}
