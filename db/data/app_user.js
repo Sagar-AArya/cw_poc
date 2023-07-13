@@ -66,7 +66,7 @@ const AppUser = (function(){
         return result;
     }
 
-    async function deleteAppUser(options) {
+    async function deleteUser(options) {
         let [err, result] = await to(sequalizeConfig.getSequelize().models.app_user.destroy(options));
         if (err) {
             let output = {
@@ -102,7 +102,7 @@ const AppUser = (function(){
         update,
         get,
         getAll,
-        deleteAppUser,
+        deleteUser,
         getAndCountAll
     }
 }());
