@@ -28,7 +28,7 @@ Thanks to [`@agusterodin`](https://github.com/agusterodin) for this usage exampl
 
 ### About NextAuth.js
 
-NextAuth.js is an easy to implement, full-stack (client/server) open source authentication library designed for [Next.js](https://nextjs.org) and [Serverless](https://vercel.com).
+NextAuth.js is an easy to implement, full-stack (client/server) open source authentication library designed for [Next.js](https://nextjs.org) and [Serverless](https://vercel.com). This is edited text
 
 Go to [next-auth.js.org](https://next-auth.js.org) for more information and documentation.
 
