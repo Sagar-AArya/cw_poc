@@ -16,6 +16,9 @@ module.exports = function (sequelize) {
             type: DataTypes.UUID,
 			allowNull: false
         },
+		city: {
+            type: DataTypes.STRING
+        },
 		client_secret: {
             type: DataTypes.UUID,
 			allowNull: false
